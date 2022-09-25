@@ -71,6 +71,7 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTH_USER_MODEL = 'hospitalBackend.user'
 ROOT_URLCONF = "HospitalEd.urls"
 
 TEMPLATES = [
@@ -97,11 +98,11 @@ WSGI_APPLICATION = "HospitalEd.wsgi.application"
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+       'ENGINE': 'django.db.postgresql_psycopg2',
+        'NAME': 'd9s9grkpi9qsn1',
+        'USER': 'tgbtppmwuuxmhi',
+        'PASSWORD': '88f81dae3d979cdabff7057e33e0c329848095eb66edaed577d84f5ad3b71291',
+        'HOST': 'ec2-35-170-146-54.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
