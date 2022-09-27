@@ -1,4 +1,4 @@
-"""HospitalEd URL Configuration
+"""HospitalCasa URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hospitalBackend import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('user/', views.UsuarioListView.as_view()),  
+    path('user/<int:pk>/', views.UsuarioRetrieveUpdateDeleteView.as_view()),  
+    path('medico/', views.MedicoListCreateView.as_view()),  
+    path('medico/<int:pk>/', views.MedicoRetrieveUpdateView.as_view()),  
 ]
